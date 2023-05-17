@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+//icons
+
+import { FaTimes, FaBars } from "react-icons/fa";
+
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
@@ -21,11 +25,7 @@ const Navbar = () => {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              {!navbarOpen ? (
-                <i className="fas fa-bars " />
-              ) : (
-                <i className="fas fa-times" />
-              )}
+              {!navbarOpen ? <FaBars /> : <FaTimes />}
             </button>
           </div>
           <div
