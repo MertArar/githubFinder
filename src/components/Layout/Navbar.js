@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-// icons
-import { FaBars, FaTimes } from "react-icons/fa";
-import { AiFillGithub } from "react-icons/ai";
-
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+
   return (
     <>
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-2 mb-3 bg-gray-900 shadow-2xl bg-blueGray-500">
@@ -16,9 +13,7 @@ const Navbar = () => {
               className="inline-block py-2 mr-4 text-sm font-bold leading-relaxed text-white uppercase whitespace-nowrap"
               to="/"
             >
-              <span className="m-2 text-lg text-white opacity-75 leading-lg animate-pulse">
-                <AiFillGithub />
-              </span>
+              <i className="m-2 text-lg text-white opacity-75 fab fa-github leading-lg animate-pulse"></i>
               Github Finder
             </Link>
             <button
@@ -26,32 +21,46 @@ const Navbar = () => {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              {!navbarOpen ? <FaBars /> : <FaTimes />}
+              {!navbarOpen ? (
+                <i className="fas fa-bars " />
+              ) : (
+                <i className="fas fa-times" />
+              )}
             </button>
           </div>
           <div
             className={
               "lg:flex flex-grow items-center" +
-              (navbarOpen ? "flex" : "hidden")
+              (navbarOpen ? " flex" : " hidden")
             }
+            id="example-navbar-danger"
           >
             <ul className="flex flex-col list-none lg:flex-row lg:ml-auto">
               <li className="nav-item">
-                <Link>
+                <Link
+                  className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
+                  to="/"
+                >
                   <i className="text-lg text-white opacity-75 fas fa-home leading-lg"></i>
-                  <span>Home</span>
+                  <span className="ml-2">Home</span>
                 </Link>
               </li>
-              <li>
-                <Link>
-                  <i className="text-lg text-white opacity-75 fas fa-home leading-lg"></i>
-                  <span>Login</span>
+              <li className="nav-item">
+                <Link
+                  className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
+                  to="/login"
+                >
+                  <i class="text-lg text-white fas fa-sign-in-alt leading-lg"></i>
+                  <span className="ml-2">Login</span>
                 </Link>
               </li>
-              <li>
-                <Link>
-                  <i className="text-lg text-white opacity-75 fas fa-home leading-lg"></i>
-                  <span>About</span>
+              <li className="nav-item">
+                <Link
+                  className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
+                  to="/about"
+                >
+                  <i className="text-lg text-white opacity-75 fas fa-user-alt leading-lg"></i>
+                  <span className="ml-2">About</span>
                 </Link>
               </li>
             </ul>
