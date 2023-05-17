@@ -1,7 +1,8 @@
-import "./App.css";
+import React from "react";
+import GithubState from "./Context/Github/GithubState";
 
-function App() {
-  return <div className="App">test</div>;
-}
+const App = () => {
+  return <GithubState></GithubState>;
+};
 
 export default App;
