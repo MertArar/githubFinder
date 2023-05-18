@@ -15,7 +15,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Users />} />
-          <Route exact path="/" element={<About />} />
+          <Route exact path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </GithubState>
