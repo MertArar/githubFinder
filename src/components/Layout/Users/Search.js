@@ -9,7 +9,7 @@ const Search = ({ setAlert }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (text === "") {
-      setAlert("Please Enter Username!");
+      setAlert("Please Enter Something!");
     } else {
       githubContext.searchUsers(text);
       setText("");
@@ -24,9 +24,9 @@ const Search = ({ setAlert }) => {
     <div>
       <Seaction />
       <form autoComplete="off" onSubmit={onSubmit}>
-        <div className="flex justify-center m-3">
+        <div className="flex justify-center m-3 ">
           <input
-            className="relative w-1/2 p-2 text-white bg-gray-800 border-4 border-opacity-30 rounded-full placeholder-blueGray-500 text-blueGray-600 border-l-blue-500 animate-pulse focus:outeline-none focus:ring-2 focus:border-transparent focus:animate-none"
+            className="relative w-1/2 p-2 text-white bg-gray-800 border-4 border-opacity-50 rounded-full placeholder-blueGray-500 text-blueGray-600 text-md border-light-blue-500 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
             name="text"
             type="search"
             placeholder="Search Users..."
@@ -38,7 +38,7 @@ const Search = ({ setAlert }) => {
       {githubContext.users.length > 0 && (
         <div className="flex justify-center">
           <button
-            className="px-3 py-2 font-semibold  tracking-wider text-white uppercase bg-green-500 rounded hover:bg-blue-600 focus:outline-none opacity-70 "
+            className="px-3 py-2 font-semibold tracking-wider text-white uppercase bg-green-500 rounded hover:bg-blue-600 focus:outline-none opacity-70"
             onClick={githubContext.clearUsers}
           >
             Clear
