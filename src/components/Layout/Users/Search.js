@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import GithubContext from "../../../Context/Github/githubContext";
 import Seaction from "./../Seaction";
 
+import { AiOutlineSearch } from "react-icons/ai";
+
 const Search = ({ setAlert }) => {
   const githubContext = useContext(GithubContext);
   const [text, setText] = useState("");
@@ -21,12 +23,12 @@ const Search = ({ setAlert }) => {
   };
 
   return (
-    <div>
+    <div className="mb-96">
       <Seaction />
       <form autoComplete="off" onSubmit={onSubmit}>
         <div className="flex justify-center m-3 ">
           <input
-            className="relative w-1/2 p-2 text-white bg-gray-800 border-4 border-opacity-50 rounded-full placeholder-blueGray-500 text-blueGray-600 text-md border-light-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+            className="relative w-1/2 p-2 text-white bg-gray-700 border-4 border-opacity-50 rounded-full placeholder-blueGray-500 text-blueGray-600 text-md  hover:bg-gray-800 focus:bg-gray-800  focus:border-transparent"
             name="text"
             type="search"
             placeholder="Search Users..."

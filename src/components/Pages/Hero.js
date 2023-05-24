@@ -4,7 +4,7 @@ import Typed from "react-typed";
 import { Link } from "react-router-dom";
 
 import { AiOutlineWarning } from "react-icons/ai";
-import { BsShieldFillCheck } from "react-icons/bs";
+
 import { RiSendPlaneFill, RiShieldCheckFill } from "react-icons/ri";
 
 const Hero = () => {
@@ -30,8 +30,8 @@ const Hero = () => {
           />
         </div>
         <p className="md:text-2xl text-xl font-bold text-gray-500">
-          Use the search engine to reach users. But there are some rules you
-          need to pay attention to.
+          Use the search engine to reach users. However, there are some rules
+          you need to pay attention to.
         </p>
 
         <button
@@ -58,7 +58,7 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4 justify-center items-center">
             <RiSendPlaneFill size={25} />
             <p className="md:text-xl sm:text-lg text-sm font-bold md:py-6">
-              You can access all the user's data on github
+              You can access all the user's data on Github
             </p>
           </div>
         </div>

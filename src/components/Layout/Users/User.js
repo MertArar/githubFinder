@@ -66,10 +66,10 @@ const User = () => {
           </div>
           <div>
             <div className="flex justify-center mt-4">
-              <span className="text-xl font-medium text-sky-400">{name}</span>
+              <span className="text-xl font-medium text-[#CED2DB]">{name}</span>
             </div>
             <div className="flex justify-center m-1 font-bold text-gray-800 text-ml ">
-              Location : <span className="text-gray-800"> {location}</span>
+              Location: <span className="text-gray-800"> {location}</span>
             </div>
 
             <p className="mt-2 font-semibold text-gray-800">

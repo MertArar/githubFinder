@@ -9,6 +9,7 @@ import Users from "./components/Layout/Users/Users";
 import About from "./components/Pages/About";
 import Login from "./components/Pages/Hero";
 import User from "./components/Layout/Users/User";
+import Footer from "./components/Layout/Footer";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/user/:login" element={<User />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </GithubState>
   );
