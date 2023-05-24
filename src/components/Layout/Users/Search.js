@@ -38,7 +38,7 @@ const Search = ({ setAlert }) => {
       {githubContext.users.length > 0 && (
         <div className="flex justify-center">
           <button
-            className="px-3 py-2 font-semibold tracking-wider text-white uppercase bg-green-500 rounded hover:bg-blue-600 focus:outline-none opacity-70"
+            className="px-8 py-3 font-semibold tracking-wider text-white uppercase bg-[#0059DF] rounded hover:opacity-70 focus:outline-none opacity-100"
             onClick={githubContext.clearUsers}
           >
             Clear

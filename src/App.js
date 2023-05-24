@@ -7,9 +7,8 @@ import GithubState from "./Context/Github/GithubState";
 import Navbar from "./components/Layout/Navbar";
 import Users from "./components/Layout/Users/Users";
 import About from "./components/Pages/About";
-import Login from "./components/Pages/Login";
+import Login from "./components/Pages/Hero";
 import User from "./components/Layout/Users/User";
-import Footer from "./components/Layout/Footer";
 
 const App = () => {
   return (
@@ -17,12 +16,11 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route exact path="/" element={<Users />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/" element={<Login />} />
+          <Route exact path="/login" element={<Users />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/user/:login" element={<User />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </GithubState>
   );

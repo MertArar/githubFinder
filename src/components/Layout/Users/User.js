@@ -45,7 +45,7 @@ const User = () => {
     <Fragment>
       <Link
         to="/"
-        className="px-3 py-2 m-2 ml-10 font-semibold text-white bg-blue-500 rounded hover:bg-blue-700"
+        className="px-10 py-2 m-2 ml-10 font-semibold text-white bg-[#0059DF] rounded hover:opacity-80 "
       >
         Back
       </Link>
@@ -56,33 +56,31 @@ const User = () => {
         <i className="text-red-600 fas fa-times-circle" />
       )}
       <div className="flex justify-center w-full h-full py-4 mx-auto">
-        <div className="w-full max-w-md px-4 py-2 my-2 shadow-2xl rounded-2xl bg-gradient-to-r from-yellow-200 via-green-200 to-green-300 lg:max-w-lg">
+        <div className="w-full max-w-md px-4 py-2 my-2 shadow-2xl rounded-2xl bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 lg:max-w-lg">
           <div className="flex justify-center">
             <img
-              className="object-cover w-24 h-24 transition-opacity duration-500 ease-in border-2 border-indigo-500 rounded-full cursor-pointer hover:opacity-90"
+              className="object-cover w-24 h-24 transition-opacity duration-500 ease-in border-2 border-sky-700 rounded-full cursor-pointer hover:opacity-90"
               src={avatar_url}
               alt=""
             />
           </div>
           <div>
             <div className="flex justify-center mt-4">
-              <span className="text-xl font-medium text-indigo-500">
-                {name}
-              </span>
+              <span className="text-xl font-medium text-sky-400">{name}</span>
             </div>
             <div className="flex justify-center m-1 font-bold text-gray-800 text-ml ">
               Location : <span className="text-gray-800"> {location}</span>
             </div>
 
             <p className="mt-2 font-semibold text-gray-800">
-              <span className="font-bold text-gray-700 md:break-words sm:break-words">
+              <span className="font-bold text-gray-800 md:break-words sm:break-words">
                 Bio{" "}
               </span>{" "}
               : {bio}
             </p>
           </div>
-          <div className="max-w-md p-3 px-5 my-2 rounded-lg shadow-sm bg-gradient-to-l from-yellow-200 via-green-200 to-green-300">
-            <button className="flex items-center px-3 py-2 mt-1 rounded-sm bg-gradient-to-br from-indigo-400 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400">
+          <div className="max-w-md p-3 px-5 my-2 rounded-lg shadow-sm bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600">
+            <button className="flex items-center px-3 py-2 mt-1 rounded-sm bg-[#0059DF] hover:animate-pulse">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={12}
@@ -124,31 +122,31 @@ const User = () => {
               {company}
             </p>
             <p className="text-gray-800">
-              <span className="font-bold text-gray-700 _blank">Website </span> :{" "}
+              <span className="font-bold text-gray-800 _blank">Website </span> :{" "}
               <a href={blog}>{blog}</a>
             </p>
           </div>
-          <div className="max-w-md p-2 rounded-lg shadow-sm bg-gradient-to-r from-yellow-200 via-green-200 to-green-300">
+          <div className="max-w-md p-2 rounded-lg shadow-sm bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600">
             <div className="flex flex-wrap justify-between px-4 m-3 justify-items-center">
-              <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-gray-800 rounded-full">
+              <span className="inline-block px-4 py-1 text-sm font-semibold text-white bg-gray-800 rounded-full">
                 Followers : {followers}
               </span>
-              <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-gray-800 rounded-full">
+              <span className="inline-block px-4 py-1 text-sm font-semibold text-white bg-gray-800 rounded-full">
                 Following : {following}
               </span>
 
-              <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-gray-800 rounded-full">
+              <span className="inline-block px-4 py-1 text-sm font-semibold text-white bg-gray-800 rounded-full">
                 Repos : {public_repos}
               </span>
-              <span className="inline-block px-3 py-1 mt-2 text-sm font-semibold text-white bg-gray-800 rounded-full">
+              <span className="inline-block px-4 py-1 mt-2 text-sm font-semibold text-white bg-gray-800 rounded-full">
                 Gists : {public_gists}
               </span>
             </div>
           </div>
-          <span className="font-bold text-gray-800 md:break-words sm:break-words ">
+          <span className="font-bold text-gray-800 md:break-words sm:break-words mt-5 ">
             Latest Repository :
           </span>{" "}
-          <div className="flex flex-wrap max-w-md p-3 px-5 mr-3 rounded-lg shadow-sm justify-evenly bg-gradient-to-l from-yellow-200 via-green-200 to-green-300">
+          <div className="flex flex-wrap max-w-md p-3 px-5 mr-3  rounded-xl shadow-sm justify-evenly bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600">
             <Repos repos={repos} />
           </div>
         </div>

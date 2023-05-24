@@ -51,7 +51,7 @@ const Navbar = () => {
                   to="/login"
                 >
                   <i class="text-lg text-white fas fa-sign-in-alt leading-lg"></i>
-                  <span className="ml-2">Login</span>
+                  <span className="ml-2">Search</span>
                 </Link>
               </li>
               <li className="nav-item">
@@ -60,7 +60,7 @@ const Navbar = () => {
                   to="/about"
                 >
                   <i className="text-lg text-white opacity-75 fas fa-user-alt leading-lg"></i>
-                  <span className="ml-2">About</span>
+                  <span className="ml-2">Terms & Policy</span>
                 </Link>
               </li>
             </ul>
